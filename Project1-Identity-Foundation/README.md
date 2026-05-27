@@ -28,16 +28,16 @@ e.g. `john.a.smith@greenwoodaccountants.co.uk` or `john.smith.finance@greenwooda
 
 | # | Display Name | UPN | Department | Job Title | Manager |
 |---|---|---|---|---|---|
-| 1 | Emma Clarke | emma.clarke@greenwoodaccountants.co.uk | Finance | Finance Manager | — |
-| 2 | Daniel Harper | daniel.harper@greenwoodaccountants.co.uk | Finance | Accounts Assistant | Emma Clarke |
-| 3 | Fatima Yusuf | fatima.yusuf@greenwoodaccountants.co.uk | HR | HR Manager | — |
-| 4 | Michael Reed | michael.reed@greenwoodaccountants.co.uk | HR | HR Coordinator | Fatima Yusuf |
-| 5 | Samuel Ejeh | samuel.ejeh@greenwoodaccountants.co.uk | IT | IT Administrator | — |
-| 6 | Ethan Cole | ethan.cole@greenwoodaccountants.co.uk | IT | IT Support Analyst | Samuel Ejeh |
-| 7 | Grace Ewere | grace.ewere@greenwoodaccountants.co.uk | Sales | Sales Manager | — |
-| 8 | Joy Adeniran | joy.adeniran@greenwoodaccountants.co.uk | Sales | Sales Executive | Grace Ewere |
-| 9 | Henry Ajibola | henry.ajibola@greenwoodaccountants.co.uk | Management | Operations Director | — |
-| 10 | Kemi Aluko | kemi.aluko@greenwoodaccountants.co.uk | Management | Executive Assistant | Henry Ajibola |
+| 1 | Emma greenwood | emma.greenwood@christtech.co.uk | Finance | Finance Manager | — |
+| 2 | Daniel greenwood | daniel.greenwood@christtech.co.uk | Finance | Accounts Assistant | Emma greenwood |
+| 3 | Fatima greenwood | fatima.greenwood@christtech.co.uk | HR | HR Manager | — |
+| 4 | Michael greenwood | michael.greenwood@christtech.co.uk | HR | HR Coordinator | Fatima greenwood |
+| 5 | Samuel greenwood | samuel.greenwood@christtech.co.uk | IT | IT Administrator | — |
+| 6 | Ethan greenwood | ethan.greenwood@christtech.co.uk | IT | IT Support Analyst | Samuel greenwood |
+| 7 | Grace greenwood | grace.greenwood@christtech.co.uk | Sales | Sales Manager | — |
+| 8 | Joy greenwood | joy.greenwood@christtech.co.uk | Sales | Sales Executive | Grace greenwood |
+| 9 | Henry greenwood | henry.greenwood@christtech.co.uk | Management | Operations Director | — |
+| 10 | Kemi greenwood | kemi.greenwood@christtech.co.uk | Management | Executive Assistant | Henry greenwood |
 
 ### PowerShell — Create Users
 ```powershell
