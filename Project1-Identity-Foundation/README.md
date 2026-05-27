@@ -423,7 +423,7 @@ Greenwood/
 | **Change ID** | CHG-001 |
 | **Title** | Identity Foundation Build — Microsoft Entra ID |
 | **Date** | 17/05/2026 |
-| **Implemented By** | Samuel Ejeh |
+| **Implemented By** | Grace Ejeh |
 | **Approved By** | Global Administrator |
 | **Description** | Created 10 test users, 5 security groups, 3 M365 groups, enabled MFA via Conditional Access, configured SSPR, set banned passwords, assigned least-privilege admin roles |
 | **Status** | ✅ Completed |
