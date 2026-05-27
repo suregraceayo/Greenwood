@@ -48,9 +48,9 @@ $passwordProfile = @{
     ForceChangePasswordNextSignIn = $true
 }
 
-New-MgUser -DisplayName "Emma Clarke" `
-  -UserPrincipalName "emma.clarke@greenwoodaccountants.co.uk" `
-  -MailNickname "emma.clarke" `
+New-MgUser -DisplayName "Emma greenwood" `
+  -UserPrincipalName "emma.greenwood@christtech.co.uk" `
+  -MailNickname "emma.greenwood" `
   -Department "Finance" `
   -JobTitle "Finance Manager" `
   -AccountEnabled $true `
@@ -310,22 +310,22 @@ Set-MgUserLicense -UserId "<user-id>" `
 
 | Group Name | Type | Members | Owner |
 |---|---|---|---|
-| SG-Finance-Users | Security (Assigned) | Emma Clarke, Daniel Harper | Samuel Ejeh |
-| SG-HR-Users | Security (Assigned) | Fatima Yusuf, Michael Reed | Samuel Ejeh |
-| SG-IT-Admins | Security (Assigned) | Samuel Ejeh, Ethan Cole | Samuel Ejeh |
-| SG-Management | Security (Assigned) | Henry Ajibola, Kemi Aluko | Samuel Ejeh |
-| SG-All-Staff | Security (Dynamic) | All enabled members | Samuel Ejeh |
-| M365-Finance | M365 Group | Finance staff | Emma Clarke |
-| M365-HR | M365 Group | HR staff | Fatima Yusuf |
-| M365-AllCompany | M365 Group | All staff | Henry Ajibola |
+| SG-Finance-Users | Security (Assigned) | Emma greenwood, Daniel greenwood | Samuel greenwood |
+| SG-HR-Users | Security (Assigned) | Fatima greenwood, Michael greenwood | Samuel greenwood |
+| SG-IT-Admins | Security (Assigned) | Samuel greenwood, Ethan greenwood | Samuel greenwood |
+| SG-Management | Security (Assigned) | Henry greenwood, Kemi greenwood| Samuel greenwood |
+| SG-All-Staff | Security (Dynamic) | All enabled members | Samuel greenwood |
+| M365-Finance | M365 Group | Finance staff | Emma greenwood |
+| M365-HR | M365 Group | HR staff | Fatima greenwood |
+| M365-AllCompany | M365 Group | All staff | Henry greenwood |
 
 ### Admin Role Assignments
 
 | User | Role | Assigned By | Date |
 |---|---|---|---|
-| Samuel Ejeh | User Administrator | Global Admin | 17/05/2026 |
-| Emma Clarke | Exchange Administrator | Global Admin | 17/05/2026 |
-| Ethan Cole | Teams Administrator | Global Admin | 17/05/2026 |
+| Samuel greenwood | User Administrator | Global Admin | 17/05/2026 |
+| Emma greenwood | Exchange Administrator | Global Admin | 17/05/2026 |
+| Ethan greenwood | Teams Administrator | Global Admin | 17/05/2026 |
 
 
 ## 🔧 Troubleshooting Guide
@@ -361,8 +361,8 @@ Get-MgUserLicenseDetail -UserId "<user-id>" | FL SkuPartNumber
 ### Issue 5: UPN Conflict (Duplicate Names)
 **Symptom:** Two users with identical first and last names — UPN conflict on creation.
 **Fix:** Apply tie-breaker rule — append middle initial or department suffix:
-- `john.a.smith@greenwoodaccountants.co.uk`
-- `john.smith.finance@greenwoodaccountants.co.uk`
+- `john.a.greenwood@christtech.co.uk`
+- `john.greenwood.finance@christtech.co.uk`
 Document the tie-breaker rule in the naming convention before deployment.
 
 
