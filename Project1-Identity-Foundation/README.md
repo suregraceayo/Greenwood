@@ -1,25 +1,21 @@
 # 🏛 Project 1 — Identity Foundation: Microsoft Entra ID
 **Greenwood Accountants | Microsoft 365 Identity & Security Implementation**
 
----
 
 ## 📋 Project Overview
 
 | Field | Details |
-|---|---|
 | **Client** | Greenwood Accountants |
-| **Difficulty** | 🟢 Beginner |
+| **Difficulty** | Beginner |
 | **Estimated Time** | 20–25 hours |
 | **Target Roles** | M365 Administrator · IT Administrator · Identity Engineer · IAM Engineer |
 | **Deadline Driver** | 60-day cyber insurance remediation window |
 
----
 
 ## 🏢 Business Scenario
 
 Greenwood Accountants is migrating from on-premises Active Directory to Microsoft 365. The firm has 80 staff across two offices. Prior to this project, the IT manager had been creating accounts manually with no MFA in place. Following a failed cyber insurance assessment, the insurer issued a 60-day ultimatum to implement a secure identity foundation.
 
----
 
 ## 👥 1. User Accounts
 
@@ -63,7 +59,6 @@ New-MgUser -DisplayName "Emma Clarke" `
 # Repeat for all 10 users with relevant details
 ```
 
----
 
 ## 👥 2. Security Groups
 
@@ -107,7 +102,6 @@ New-MgGroupMember -GroupId "<SG-Finance-Users-ID>" `
   -DirectoryObjectId "<user-id>"
 ```
 
----
 
 ## 📦 3. Microsoft 365 Groups
 
@@ -141,7 +135,6 @@ New-MgGroup -DisplayName "M365-AllCompany" `
   -Visibility "Public"
 ```
 
----
 
 ## 🔐 4. Multi-Factor Authentication (MFA)
 
@@ -175,14 +168,13 @@ All users must register MFA before accessing any Microsoft 365 service. Conditio
 
 > ⚠️ **Exception Process:** Users with older devices unable to install Microsoft Authenticator must submit a helpdesk ticket. SMS is enabled as a fallback and documented in the exception register.
 
----
 
 ## 🔑 5. Self-Service Password Reset (SSPR)
 
 ### Design
 
 | Setting | Value |
-|---|---|
+
 | Scope | All Users |
 | Authentication Methods Required | 2 |
 | Methods Available | Authenticator App · Mobile Phone · Email |
@@ -199,7 +191,7 @@ All users must register MFA before accessing any Microsoft 365 service. Conditio
 
 > 💡 **Lesson Learned:** Always test the SSPR flow as a real end user before enabling for everyone. The admin view and the user experience are significantly different.
 
----
+
 
 ## 🚫 6. Custom Banned Passwords
 
@@ -224,7 +216,6 @@ London2026
 4. Add terms to the **Custom Banned Password List**
 5. Click **Save**
 
----
 
 ## 🛡️ 7. Admin Role Assignments (Least Privilege)
 
@@ -251,14 +242,13 @@ New-MgDirectoryRoleMemberByRef `
 
 > ⚠️ **Lesson Learned:** During early testing, Global Administrator was accidentally assigned instead of User Administrator. Always verify role scope before assignment. Least privilege must be enforced from day one.
 
----
 
 ## 📚 Runbooks
 
 ### Runbook 1 — Create New User
 
 | Step | Action |
-|---|---|
+
 | 1 | Obtain approved user request form from HR |
 | 2 | Connect to Microsoft Graph: `Connect-MgGraph -Scopes "User.ReadWrite.All"` |
 | 3 | Create user with correct UPN format: `firstname.lastname@greenwoodaccountants.co.uk` |
@@ -308,8 +298,6 @@ Set-MgUserLicense -UserId "<user-id>" `
   -RemoveLicenses @("<licence-sku-id>")
 ```
 
----
-
 ## 📋 Policy Register
 
 ### Conditional Access Policies
@@ -339,7 +327,6 @@ Set-MgUserLicense -UserId "<user-id>" `
 | Emma Clarke | Exchange Administrator | Global Admin | 17/05/2026 |
 | Ethan Cole | Teams Administrator | Global Admin | 17/05/2026 |
 
----
 
 ## 🔧 Troubleshooting Guide
 
@@ -378,7 +365,6 @@ Get-MgUserLicenseDetail -UserId "<user-id>" | FL SkuPartNumber
 - `john.smith.finance@greenwoodaccountants.co.uk`
 Document the tie-breaker rule in the naming convention before deployment.
 
----
 
 ## ⚡ Challenges Faced
 
